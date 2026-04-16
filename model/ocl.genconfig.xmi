@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genconfig:GenConfig xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:genconfig="http://www.emfts.org/genconfig/1.0"
+    ecorePackage="http://www.eclipse.org/fennec/m2x/ocl/1.0#/">
+
+  <!-- Generation Settings -->
+  <generation mode="emf" outputDir="./generated"/>
+
+  <!-- Package Settings -->
+  <package prefix="Ocl" basePackage=""
+      generateFactory="true"
+      generatePackage="true"
+      generateIndex="true"/>
+
+  <!-- Class Defaults -->
+  <classDefaults
+      generateInterface="true"
+      generateImpl="true"
+      rootExtendsClass="BasicEObject"/>
+
+  <!-- Feature Defaults - notify=false because OCL AST nodes are short-lived -->
+  <featureDefaults notify="false" property="editable"/>
+
+</genconfig:GenConfig>
