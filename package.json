@@ -1,0 +1,37 @@
+{
+  "name": "@emfts/ocl.model",
+  "version": "0.0.1-next.1",
+  "description": "TypeScript OCL model generated from Ecore",
+  "type": "module",
+  "main": "dist/generated/index.js",
+  "module": "dist/generated/index.js",
+  "types": "dist/generated/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/generated/index.js",
+      "types": "./dist/generated/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "generate": "emfts-codegen generate -m model/ocl.ecore -c model/ocl.genconfig.xmi -o src/generated"
+  },
+  "dependencies": {
+    "@emfts/core": "0.1.1-next.2"
+  },
+  "devDependencies": {
+    "@emfts/codegen": "0.0.1-next.5",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eclipse-fennec/ocl.model.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "EPL-2.0"
+}
